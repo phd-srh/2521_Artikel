@@ -4,9 +4,13 @@ public class Artikel {
     private int artikelnummer;
 
     // 2. Konstruktor(en)
-    public Artikel(String bezeichnung, int artikelnummer) {
+    public Artikel(int artikelnummer, String bezeichnung) {
         this.bezeichnung = bezeichnung;
         this.artikelnummer = artikelnummer;
+    }
+
+    protected void finalize() {
+        System.out.println("Der Artikel existiert nun nicht mehr");
     }
 
     // 3. Getter/Setter
